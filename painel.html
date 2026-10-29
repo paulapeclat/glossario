@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#030306">
+  <title>Painel do Glossário</title>
+  <meta name="description" content="De onde vêm os termos que viralizam entre as crianças: volume por fonte, ranking de termos e o filtro de segurança do Glossário das Infâncias.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preload" href="assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/estilo.css">
+  <script src="assets/painel.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#painel">Pular para o painel</a>
+
+  <div id="aviso-exemplo" class="previa" hidden>
+    <div class="wrap previa__in">
+      <p><b>Dados de exemplo.</b> Números simulados para validar o painel. Quando a coleta real rodar, eles são substituídos automaticamente.</p>
+    </div>
+  </div>
+
+  <div id="aviso-aquecimento" class="previa" hidden>
+    <div class="wrap previa__in">
+      <p><b>Dados reais · aquecimento.</b> <span id="aquec-txt"></span></p>
+    </div>
+  </div>
+
+  <header class="top">
+    <div class="wrap top__in">
+      <a class="brand" href="https://paulapeclat.com.br" rel="noopener" aria-label="Paula Peclat EdTech">
+        <img src="assets/img/p-mark.webp" width="40" height="40" alt="">
+        <span><b>Paula<span class="dot">.</span><span class="peclat"><span>P</span><span>e</span><span>c</span><span>l</span><span>a</span><span>t</span></span></b><small>EdTech</small></span>
+      </a>
+      <nav class="abas" aria-label="Seções">
+        <a href="index.html">Glossário</a>
+        <a href="painel.html" aria-current="page">Painel</a>
+        <a href="politica.html">Política de dados</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="painel">
+    <section class="p-hero">
+      <div class="wrap">
+        <span class="eyebrow">Painel de incidência</span>
+        <h1>De onde vêm os <span class="peclat"><span>t</span><span>e</span><span>r</span><span>m</span><span>o</span><span>s</span></span>.</h1>
+        <p class="lead">Quanto cada fonte pública contribui, quais termos estão subindo e quanto o filtro de segurança barrou. Tudo em números agregados, sem nenhum dado de pessoas.</p>
+        <div class="periodo" role="group" aria-label="Período">
+          <span class="mono">Período</span>
+          <div class="seg seg--escuro" id="periodo">
+            <button type="button" data-sem="4" aria-pressed="false">4 semanas</button>
+            <button type="button" data-sem="8" aria-pressed="true">8 semanas</button>
+            <button type="button" data-sem="12" aria-pressed="false">12 semanas</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-corpo">
+      <div class="wrap p-grid">
+        <div class="kpis" id="kpis"></div>
+
+        <article class="painel-card largo">
+          <header class="pc-cab">
+            <div>
+              <h2>Volume por fonte</h2>
+              <p class="pc-sub">Textos públicos analisados por semana</p>
+            </div>
+            <div class="legenda" id="leg-volume"></div>
+          </header>
+          <div class="grafico" id="g-volume"></div>
+          <details class="tabela-det"><summary>Ver como tabela</summary><div class="tabela-wrap" id="t-volume"></div></details>
+        </article>
+
+        <article class="painel-card">
+          <header class="pc-cab">
+            <div>
+              <h2>Qual fonte pesa mais?</h2>
+              <p class="pc-sub">Onde os termos acompanhados mais apareceram no período</p>
+            </div>
+          </header>
+          <div id="g-proporcao" class="proporcao"></div>
+          <p class="pc-nota" id="n-proporcao"></p>
+        </article>
+
+        <article class="painel-card">
+          <header class="pc-cab">
+            <div>
+              <h2>Filtro de segurança</h2>
+              <p class="pc-sub">Do que foi detectado ao que chegou ao glossário</p>
+            </div>
+          </header>
+          <div id="g-funil" class="funil"></div>
+          <h3 class="pc-mini">Por que foram barrados</h3>
+          <div id="g-barrados" class="barras-h"></div>
+        </article>
+
+        <article class="painel-card largo">
+          <header class="pc-cab">
+            <div>
+              <h2>Ranking dos termos</h2>
+              <p class="pc-sub">Ocorrências no período, tendência semanal e a fonte de cada termo</p>
+            </div>
+            <div class="legenda" id="leg-ranking"></div>
+          </header>
+          <div id="ranking" class="ranking"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="como">
+      <div class="wrap">
+        <p class="pc-nota">Métricas calculadas por este projeto a partir de dados públicos agregados. Não são métricas oficiais do YouTube nem de outros serviços. Veja a <a href="politica.html">política de dados</a> para saber exatamente o que é coletado.</p>
+        <p class="pc-nota mono" id="gerado"></p>
+      </div>
+    </section>
+  </main>
+
+  <div class="tooltip" id="tooltip" role="status" hidden></div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#030306">
+  <title>Política de Dados do Glossário</title>
+  <meta name="description" content="O que o Glossário das Infâncias coleta, de onde, com qual base legal, por quanto tempo e o que nunca é coletado.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preload" href="assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="top">
+    <div class="wrap top__in">
+      <a class="brand" href="https://paulapeclat.com.br" rel="noopener" aria-label="Paula Peclat EdTech">
+        <img src="assets/img/p-mark.webp" width="40" height="40" alt="">
+        <span><b>Paula<span class="dot">.</span><span class="peclat"><span>P</span><span>e</span><span>c</span><span>l</span><span>a</span><span>t</span></span></b><small>EdTech</small></span>
+      </a>
+      <nav class="abas" aria-label="Seções">
+        <a href="index.html">Glossário</a>
+        <a href="painel.html">Painel</a>
+        <a href="politica.html" aria-current="page">Política de dados</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="doc">
+    <div class="wrap doc__grid">
+      <nav class="indice" aria-label="Nesta página">
+        <a href="#resumo">Resumo</a>
+        <a href="#finalidade">Finalidade</a>
+        <a href="#fontes">Fontes</a>
+        <a href="#leis">Bases legais</a>
+        <a href="#tratamento">Tratamento e prazos</a>
+        <a href="#filtro">Filtro de conteúdo</a>
+        <a href="#site">Este site</a>
+        <a href="#contato">Direitos e contato</a>
+      </nav>
+
+      <article>
+        <span class="eyebrow">Política de dados · versão 1.0 · 28/10/2026</span>
+        <h1>Só dados públicos. Nenhuma pessoa identificada.</h1>
+
+        <h2 id="resumo">Resumo</h2>
+        <div class="resumo">
+          <div class="sim"><b>O que lemos</b>Títulos e descrições de vídeos públicos, notícias, páginas públicas de sites aprovados, buscas em alta no Google Trends e resumos de artigos científicos.</div>
+          <div class="nao"><b>O que nunca lemos</b>Comentários, perfis, mensagens, grupos, áudios, imagens, vídeos ou qualquer conteúdo que exija login.</div>
+          <div class="sim"><b>O que guardamos</b>Apenas números: quantas vezes cada palavra apareceu, por fonte e por dia.</div>
+          <div class="nao"><b>O que nunca guardamos</b>Nomes, @perfis, canais, links de vídeo, e-mails, telefones ou qualquer dado de crianças.</div>
+        </div>
+
+        <h2 id="finalidade">Finalidade</h2>
+        <p>O Glossário das Infâncias existe para ajudar pais, mães e educadores a entender as gírias, bordões e memes que circulam entre as crianças e a conversar sobre eles. O sistema percebe quando uma palavra começa a aparecer muito em conteúdos públicos. Uma pedagoga revisa e escreve cada verbete antes de publicá-lo.</p>
+        <p>Os dados não são usados para publicidade, perfilamento, venda ou para identificar, monitorar ou contatar qualquer pessoa.</p>
+
+        <h2 id="fontes">Fontes e situação de cada uma</h2>
+        <p>Só entram fontes cadastradas com base legal, tipo de dado e prazo de retenção. O próprio sistema se recusa a funcionar se uma fonte não cumprir esses requisitos.</p>
+        <div class="matriz-wrap">
+          <table class="matriz">
+            <thead><tr><th>Fonte</th><th>Situação</th><th>O que é lido</th><th>Como</th></tr></thead>
+            <tbody>
+              <tr><td><strong>YouTube</strong> (vídeo)</td><td><span class="st ok">ativa</span></td><td>Título e descrição de vídeos públicos, com busca segura estrita</td><td>API oficial (YouTube Data API v3), conforme os termos da plataforma</td></tr>
+              <tr><td><strong>Notícias</strong> (texto)</td><td><span class="st ok">ativa</span></td><td>Título e resumo de reportagens públicas</td><td>RSS público do Google Notícias</td></tr>
+              <tr><td><strong>Web aberta</strong> (texto)</td><td><span class="st ok">ativa</span></td><td>Título, subtítulos e parágrafos de páginas públicas de sites aprovados pela curadoria</td><td>Robô identificado, que obedece ao robots.txt e às pausas pedidas por cada site, sem login, comentários, menus ou imagens</td></tr>
+              <tr><td><strong>Google Trends</strong> (buscas)</td><td><span class="st ok">ativa</span></td><td>Só os termos do feed público "Em alta agora" do Brasil</td><td>Um termo só é usado se também aparecer em outra fonte. Os demais, como nomes de pessoas e assuntos do noticiário, são descartados sem registro</td></tr>
+              <tr><td><strong>Artigos científicos</strong> (texto)</td><td><span class="st ok">ativa</span></td><td>Título e resumo de artigos em português, sem nomes de autores ou instituições</td><td>Base aberta OpenAlex, que inclui SciELO e repositórios universitários. Serve de apoio: sugere referências para os verbetes e não dispara sozinha a detecção de termos</td></tr>
+              <tr><td>Google Busca e Google Acadêmico</td><td><span class="st no">proibida</span></td><td>Nada</td><td>Não têm API aberta e seus termos proíbem consultas automatizadas</td></tr>
+              <tr><td><strong>TikTok</strong></td><td><span class="st av">em avaliação</span></td><td>Somente se aprovada a API de Pesquisa da plataforma</td><td>Exige aprovação acadêmica e uso não comercial</td></tr>
+              <tr><td>Comentários de qualquer plataforma</td><td><span class="st no">proibida</span></td><td>Nada</td><td>Podem conter dados e falas de crianças</td></tr>
+              <tr><td>Áudio, vídeo, imagens e transcrições</td><td><span class="st no">proibida</span></td><td>Nada</td><td>Podem expor voz, rosto e identidade</td></tr>
+              <tr><td>Grupos, mensagens e perfis (WhatsApp, Discord, Telegram, redes)</td><td><span class="st no">proibida</span></td><td>Nada</td><td>Espaços privados ou ligados a pessoas</td></tr>
+              <tr><td>Páginas com login ou coleta automatizada contra os termos do site</td><td><span class="st no">proibida</span></td><td>Nada</td><td>Viola termos de uso e a expectativa de privacidade</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="leis">Bases legais e normas observadas</h2>
+        <h3>Lei Geral de Proteção de Dados (Lei 13.709/2018)</h3>
+        <ul>
+          <li><strong>Princípios (art. 6º):</strong> finalidade, adequação, necessidade e segurança orientam o projeto. Coletamos o mínimo possível e descartamos o texto assim que as palavras são contadas.</li>
+          <li><strong>Dados de acesso público (art. 7º, §§ 3º, 4º e 7º):</strong> usamos apenas conteúdo publicado abertamente, para uma finalidade legítima, específica e compatível com a publicação, sem reconstruir perfis de ninguém.</li>
+          <li><strong>Dados anonimizados (art. 12):</strong> o que fica guardado são contagens de palavras, que não permitem identificar pessoas.</li>
+          <li><strong>Crianças e adolescentes (art. 14):</strong> o projeto não trata dados de crianças. Não há cadastro, conta, formulário ou coleta de comentários.</li>
+        </ul>
+        <h3>ECA Digital (Lei 15.211/2025)</h3>
+        <p>Em vigor desde 17 de março de 2026, protege crianças e adolescentes em serviços digitais. O glossário é dirigido a adultos, não tem contas nem publicidade e não faz perfilamento.</p>
+        <h3>Marco Civil da Internet (Lei 12.965/2014) e termos das plataformas</h3>
+        <p>Respeitamos os termos de uso de cada fonte. No YouTube usamos apenas a API oficial e não guardamos os dados que ela devolve. As métricas do painel são calculadas por este projeto e não são métricas oficiais do YouTube.</p>
+        <h3>Direitos autorais (Lei 9.610/1998)</h3>
+        <p>Não reproduzimos conteúdos de terceiros. Os verbetes são textos próprios e as reportagens aparecem como citação curta com link para a fonte original (art. 46, III).</p>
+
+        <h2 id="tratamento">Como os dados são tratados e por quanto tempo</h2>
+        <div class="matriz-wrap">
+          <table class="matriz">
+            <thead><tr><th>O quê</th><th>Onde fica</th><th>Prazo</th></tr></thead>
+            <tbody>
+              <tr><td>Títulos, descrições e resumos lidos</td><td>Só na memória durante a execução</td><td>Descartados ao fim de cada coleta</td></tr>
+              <tr><td>Frases de exemplo para a revisão</td><td>Fila privada da curadoria, sem links, @perfis, e-mails ou telefones</td><td>Até 30 dias</td></tr>
+              <tr><td>Termos do Google Trends não confirmados por outra fonte</td><td>Em nenhum lugar</td><td>Descartados na hora</td></tr>
+              <tr><td>Referências de artigos sugeridas à curadoria</td><td>Fila privada (título, ano e link do artigo)</td><td>Até a decisão sobre o termo</td></tr>
+              <tr><td>Contagem diária de cada palavra</td><td>Repositório privado</td><td>90 dias</td></tr>
+              <tr><td>Métricas agregadas do painel</td><td>Repositório privado e este site</td><td>Até 400 dias</td></tr>
+              <tr><td>Verbetes publicados</td><td>Este site</td><td>Enquanto forem úteis</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Os prazos são aplicados automaticamente pelo sistema a cada coleta.</p>
+
+        <h2 id="filtro">Filtro de conteúdo</h2>
+        <p>Antes de qualquer revisão, o sistema descarta termos ofensivos, discriminatórios, de ódio ou extremismo (inclusive códigos e símbolos nazistas, fascistas e antissemitas), de conteúdo sexual, ligados a drogas, apostas, violência ou crime. Também descarta palavras que aparecem com frequência ao lado desse tipo de conteúdo. Termos barrados não são exibidos, guardados ou contados individualmente. O painel mostra apenas quantos foram barrados, por categoria.</p>
+
+        <h2 id="site">Este site</h2>
+        <ul>
+          <li>Não usa cookies, rastreadores, anúncios ou fontes e scripts de terceiros.</li>
+          <li>Não tem formulários nem contas e não pede nenhum dado a quem visita.</li>
+          <li>Nosso robô de leitura se identifica como <strong>GlossarioInfanciasBot</strong>. Donos de sites podem bloqueá-lo pelo robots.txt a qualquer momento.</li>
+          <li>O servidor de hospedagem pode registrar dados técnicos de acesso, como em qualquer site, conforme a política da própria hospedagem.</li>
+        </ul>
+
+        <h2 id="contato">Direitos e contato</h2>
+        <p>Se você encontrar aqui qualquer informação que identifique uma pessoa, um conteúdo inadequado ou um erro, fale com a curadoria pelo site <a href="https://paulapeclat.com.br" rel="noopener">paulapeclat.com.br</a>. Pedidos de correção ou remoção são atendidos em até 7 dias.</p>
+
+        <p class="aviso-juridico">Este documento descreve como o sistema foi construído e opera. Ele será revisado por profissional do direito especializado em proteção de dados antes do lançamento público e sempre que uma fonte nova for incluída.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap rodape__in">
+      <img src="assets/img/logo-paula-peclat.webp" width="792" height="882" alt="Paula Peclat" decoding="async">
+      <div>
+        <p>O Glossário das Infâncias é um projeto de <a href="https://paulapeclat.com.br" rel="noopener">Paula Peclat EdTech</a>.</p>
+        <p>Sem cookies, sem rastreadores, sem dados de crianças.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

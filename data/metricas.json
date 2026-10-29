@@ -1,0 +1,130 @@
+{
+  "exemplo": false,
+  "gerado_em": "2026-10-29T14:49+00:00",
+  "fontes": [
+    {
+      "id": "youtube",
+      "nome": "YouTube",
+      "tipo": "vídeo"
+    },
+    {
+      "id": "noticias",
+      "nome": "Notícias",
+      "tipo": "texto"
+    },
+    {
+      "id": "web_aberta",
+      "nome": "Web aberta",
+      "tipo": "texto"
+    },
+    {
+      "id": "google_trends",
+      "nome": "Google Trends",
+      "tipo": "busca"
+    },
+    {
+      "id": "artigos",
+      "nome": "Artigos científicos",
+      "tipo": "texto"
+    }
+  ],
+  "semanas": [
+    "2026-08-10",
+    "2026-08-17",
+    "2026-08-24",
+    "2026-08-31",
+    "2026-09-07",
+    "2026-09-14",
+    "2026-09-21",
+    "2026-09-28",
+    "2026-10-05",
+    "2026-10-12",
+    "2026-10-19",
+    "2026-10-26"
+  ],
+  "textos": {
+    "youtube": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "noticias": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "web_aberta": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "google_trends": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "artigos": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "termos": [],
+  "funil": {
+    "textos": 0,
+    "picos": 0,
+    "barrados": 0,
+    "fila": 6,
+    "publicados": 1
+  },
+  "barrados_por_categoria": {},
+  "aquecimento": {
+    "dias": 0,
+    "meta": 14
+  }
+}
